@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import appRouter from './app';
+import authRouter from './auth';
+import healthRouter from './health';
 
 const router = Router();
 
-router.use('/app', appRouter);
+router.use('/auth', authRouter);
+router.use('/health', healthRouter);
 
 export default router;
